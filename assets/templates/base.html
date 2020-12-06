@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css"/>
+</head>
+
+<title>benfrisbie.com - {{template "title" .}}</title>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="/static/images/frisbee.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                Home
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsCollapse" aria-controls="navbarsCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarsCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <!-- <a class="nav-link" href="/contact">Contact</a> -->
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main role="main"></main>
+        <div class="container">
+            <div class="jumbotron">
+                {{template "content" .}}
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer border-top mt-auto py-3">
+        <div class="text-center">
+            <div class="container">
+                <a href="https://github.com/benfrisbie">
+                    <!-- https://github.com/logos -->
+                    <img src="/static/images/github/GitHub-Mark.png" height="20">
+                    <!-- <img src="/static/images/github/GitHub_Logo.png" height="20"> -->
+                </a>
+                ·
+                <a href="https://www.twitch.tv/bfrisbie">
+                    <!-- https://brand.twitch.tv/ -->
+                    <!-- <img src="/static/images/twitch/TwitchExtrudedWordmarkPurple.png" height="20"> -->
+                    <img src="/static/images/twitch/TwitchGlitchPurple.png" height="20">
+                </a>
+                ·
+                <a href="https://www.linkedin.com/in/ben-frisbie/">
+                    <!-- https://brand.linkedin.com/downloads -->
+                    <img src="/static/images/linkedin/LI-In-Bug.png" height="20">
+                    <!-- <img src="/static/images/linkedin/LI-Logo.png" height="20"> -->
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
