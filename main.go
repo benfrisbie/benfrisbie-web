@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"net/http"
 
 	"github.com/gin-contrib/multitemplate"
@@ -8,6 +9,7 @@ import (
 )
 
 func main() {
+	gin.SetMode(gin.ReleaseMode)
 	router := gin.Default()
 
 	renderer := multitemplate.NewRenderer()
@@ -26,5 +28,5 @@ func main() {
 		c.HTML(http.StatusOK, "404", gin.H{})
 	})
 
-	router.Run() // listen and serve on 0.0.0.0:8080
+	log.Fatal(router.Run()) // listen and serve on 0.0.0.0:8080
 }

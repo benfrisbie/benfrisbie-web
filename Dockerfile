@@ -10,7 +10,7 @@ ENV GO111MODULE=on
 RUN go mod download && go mod verify
 
 # Copy rest of project and build
-COPY . .
+COPY main.go .
 RUN CGO_ENABLED=0 GOOS=linux go build -o app.o
 
 ###############################################################################
@@ -18,5 +18,6 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o app.o
 ###############################################################################
 FROM alpine:latest
 COPY --from=builder /app/app.o .
+COPY assets assets
 EXPOSE 8080
 CMD ["./app.o"]
